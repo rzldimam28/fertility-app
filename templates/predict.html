@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title%} Predict {% endblock %}
+
+{%block content%}
+
+<section class="panel b-green" id="2">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="contact-content">
+                <div class="heading">
+                  <h4>PREDICTION</h4>
+                  <h5 style="color:white">Fill all the input parameters below to start the prediction</h5>
+                </div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="contat-form">
+                      <form id="contact" action="" method="POST">
+                        <fieldset>
+                          <label for="child_disease" style="color:white;">Child Disease</label>
+                            <select name="child_disease" class="form-control" id="name">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>                        
+                          </select> <!--
+                          <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required> -->
+                        </fieldset>
+                        <fieldset>
+                          <label for="trauma" style="color:white;">Trauma</label>
+                            <select name="trauma" class="form-control" id="name">
+                              <option value="0">No</option>
+                              <option value="1">Yes</option>                        
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                          <label for="surgical" style="color:white;">Surgical</label>
+                            <select name="surgical" class="form-control" id="name">
+                              <option value="0">No</option>
+                              <option value="1">Yes</option>                        
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                          <label for="alcohol" style="color:white;">Alcohol</label>
+                            <select name="alcohol" class="form-control" id="name">
+                              <option value="0">Everyday</option>
+                              <option value="1">Several Times a Day</option>
+                              <option value="2">Several Times a Week</option>
+                              <option value="3">Once a Week</option>
+                              <option value="4">Hardly Ever or Never</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                          <label for="smoking" style="color:white;">Smoking</label>
+                            <select name="smoking" class="form-control" id="name">
+                              <option value="0">Daily</option>
+                              <option value="1">Occasional</option>
+                              <option value="2">Never</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                          <label for="sitting_hours" style="color:white;">Sitting Hours</label>
+                            <input name="sitting_hours" min="0" max="24" style="background-color:whitesmoke;color: black;" type="number" class="form-control" required>
+                        <!-- </fieldset>
+                        <fieldset>
+                          <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                        </fieldset>
+                        <fieldset>
+                          <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+                        </fieldset>
+                        <fieldset>  
+                          <input type="submit" value="START PREDICTION" href = "result" id="form_submit" class="btn"> -->
+                          <button type="submit" id="form-submit" class="btn" href="/result">Predict</button>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="more-info">
+                      <h3>Features Description</h3>
+                      <h5><b>Child Disease</b> : (ie , chicken pox, measles, mumps, polio)</h5>
+                      <h5><b>Trauma</b> : Accident or serious trauma</h5>
+                      <h5><b>Surgical</b> : Surgical intervention</h5>
+                      <h5><b>Alcohol</b> : Frequency of alcohol consumption</h5>
+                      <h5><b>Smoking</b> : Smoking habit</h5>
+                      <h5><b>Sitting Hours</b> : Number of hours spent sitting per day</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--
+            <div class="col-md-12">
+              <div class="footer">
+                <p>Copyright &copy; 2017 Your Company 
+                | Designed by TemplateMo</p>
+              </div>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+{% endblock %}
